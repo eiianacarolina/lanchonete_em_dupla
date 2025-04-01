@@ -53,6 +53,10 @@ class User extends Authenticatable
         return $this->role === self::ROLE_ADMIN;
     }
 
+    public function cliente(){
+        return $this->hasOne(Cliente::class);
+    }
+
     public function isCiente(){
         return $this->role === self::ROLE_CLIENTE;
     }
